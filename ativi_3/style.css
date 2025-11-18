@@ -1,0 +1,115 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --card: #fff;
+    --accent: #333;
+    --header: #111;
+}
+
+[data-theme="dark"] {
+    --bg: #0e0e0e;
+    --text: #eee;
+    --card: #1a1a1a;
+    --accent: #888;
+    --header: #000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+header {
+    background: var(--header);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+nav {
+    background: #222;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: var(--accent);
+}
+
+.depoimento {
+    background: var(--card);
+    border-left: 6px solid var(--accent);
+    padding: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+button, input, textarea {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background: var(--header);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.7s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
